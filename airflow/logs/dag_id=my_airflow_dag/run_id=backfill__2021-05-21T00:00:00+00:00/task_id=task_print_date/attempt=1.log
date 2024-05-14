@@ -1,0 +1,29 @@
+[2024-05-14 23:15:56,843] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: my_airflow_dag.task_print_date backfill__2021-05-21T00:00:00+00:00 [queued]>
+[2024-05-14 23:15:56,850] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: my_airflow_dag.task_print_date backfill__2021-05-21T00:00:00+00:00 [queued]>
+[2024-05-14 23:15:56,850] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-14 23:15:56,850] {taskinstance.py:1358} INFO - Starting attempt 1 of 2
+[2024-05-14 23:15:56,850] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-14 23:15:56,862] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): task_print_date> on 2021-05-21 00:00:00+00:00
+[2024-05-14 23:15:56,864] {standard_task_runner.py:52} INFO - Started process 28600 to run task
+[2024-05-14 23:15:56,866] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'my_airflow_dag', 'task_print_date', 'backfill__2021-05-21T00:00:00+00:00', '--job-id', '7', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/my_airflow_dag.py', '--cfg-path', '/tmp/tmpgi2u47w1', '--error-file', '/tmp/tmpb7vt9x_2']
+[2024-05-14 23:15:56,866] {standard_task_runner.py:80} INFO - Job 7: Subtask task_print_date
+[2024-05-14 23:15:56,890] {task_command.py:370} INFO - Running <TaskInstance: my_airflow_dag.task_print_date backfill__2021-05-21T00:00:00+00:00 [running]> on host jithish-HP-ZBook-17-G5
+[2024-05-14 23:15:56,921] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=my-email@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=my_airflow_dag
+AIRFLOW_CTX_TASK_ID=task_print_date
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-21T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=backfill__2021-05-21T00:00:00+00:00
+[2024-05-14 23:15:56,922] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-05-14 23:15:56,922] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2024-05-14 23:15:56,926] {subprocess.py:85} INFO - Output:
+[2024-05-14 23:15:56,928] {subprocess.py:92} INFO - Tue 14 May 2024 11:15:56 PM +08
+[2024-05-14 23:15:56,928] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-05-14 23:15:56,944] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=my_airflow_dag, task_id=task_print_date, execution_date=20210521T000000, start_date=20240514T151556, end_date=20240514T151556
+[2024-05-14 23:15:56,957] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-05-14 23:15:56,975] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
